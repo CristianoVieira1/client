@@ -1,8 +1,7 @@
 
-![React Avançado](https://raw.githubusercontent.com/React-Avancado/boilerplate/master/public/img/logo-gh.svg)
+![Cristiano Borges](https://github.com/CristianoVieira1/CristianoVieira1/blob/main/workflows/computer-illustration.png)
 
-This is a [Next.js](https://nextjs.org/) boilerplate to be used in a course called [React Avançado](https://reactavancado.com.br/).
-![ci](https://github.com/React-Avancado/boilerplate/workflows/ci/badge.svg)
+Projeto desenvolvido em [Next.js](https://nextjs.org/) plataforma de GAMES.
 ## What is inside?
 
 This project uses lot of stuff as:
@@ -31,20 +30,25 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-## Commands
+## Comandos
 
-- `dev`: runs your application on `localhost:3000`
-- `build`: creates the production build version
-- `start`: starts a simple server with the build production code
-- `lint`: runs the linter in all components and pages
+- `dev`: executa seu aplicativo em`localhost:3000`
+- `build`: cria a versão de compilação de produção
+- `start`: inicia um servidor simples com o código de produção da compilação
+- `lint`: executa o linter em todos os componentes e páginas
 - `test`: runs jest to test all components and pages
-- `test:watch`: runs jest in watch mode
+- `test:watch`: executa jest em watch mode
 - `storybook`: runs storybook on `localhost:6006`
 - `build-storybook`: create the build version of storybook
 
-## Learn More
+## API
 
-To learn more about Next.js, take a look at the following resources:
+https://github.com/CristianoVieira1/wongames
+
+## Saber mais
+
+
+Para saber mais sobre Next.js, dê uma olhada nos seguintes recursos:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.

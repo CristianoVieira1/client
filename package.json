@@ -1,7 +1,11 @@
 {
-  "name": "react-avancado-boilerplate",
+  "name": "boilerplate",
   "version": "1.0.0",
   "private": true,
+  "author": {
+    "name": "Cristiano Borges",
+    "email": "cristianovieirati@gmail.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
