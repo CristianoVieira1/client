@@ -1,5 +1,5 @@
 
-![Cristiano Borges](https://github.com/CristianoVieira1/CristianoVieira1/blob/main/workflows/computer-illustration.png)
+<p align="center"><a href="#" target="_blank"><img src="https://github.com/CristianoVieira1/client/blob/master/public/img/logo-2.png" width="400"></a></p>
 
 Projeto desenvolvido em [Next.js](https://nextjs.org/) plataforma de GAMES.
 ## What is inside?
