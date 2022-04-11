@@ -29,7 +29,9 @@ export default {
     black: '#030517',
     lightGray: '#EAEAEA',
     gray: '#8F8F8F',
-    darkGray: '#2E2F42'
+    darkGray: '#2E2F42',
+    button: '#4636ff',
+    linearGradient: 'linear-gradient(60deg, #690ed0 0%, #170da2 100%)'
   },
   spacings: {
     xxsmall: '0.8rem',
