@@ -1,71 +1,71 @@
-/* eslint-disable @next/next/no-img-element */
 import * as S from './styles'
 
 export type LogoProps = {
   color?: 'white' | 'black'
   size?: 'normal' | 'large'
   hideOnMobile?: boolean
+  id?: string
 }
 
 const Logo = ({
+  id = 'logo',
   color = 'white',
   size = 'normal',
   hideOnMobile = false
 }: LogoProps) => (
   <S.Wrapper color={color} size={size} hideOnMobile={hideOnMobile}>
     <svg
-      width="158"
-      height="48"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 158 48"
       role="img"
       aria-label="Won Games"
     >
       <path
-        d="M.055 15.227.019 35.872c-.008 4.796 5.336 7.663 9.327 5.004l20.596-13.722L50.49 40.947c3.982 2.672 9.335-.176 9.344-4.972l.034-19.997c.014-7.882-7.549-13.565-15.116-11.361l-.873.254a50.875 50.875 0 0 1-29.358-.27C7.351 2.366.068 7.716.055 15.226Z"
-        fill="url(#a)"
+        fill={`url(#paint_linear_${id})`}
+        d="M.05 15.23L.02 35.87a6 6 0 009.33 5l20.6-13.72 20.54 13.8a6 6 0 009.34-4.97l.04-20A11.81 11.81 0 0044.75 4.62l-.87.25a50.87 50.87 0 01-29.36-.27A11.15 11.15 0 00.05 15.23z"
       />
       <path
-        d="m30.163 27.16-6.033-4.292a.5.5 0 0 0-.782.494l1.293 7.298 5.523-3.5Z"
         fill="#110F28"
         fillOpacity=".15"
+        d="M30.16 27.16l-6.03-4.3a.5.5 0 00-.78.5l1.3 7.3 5.51-3.5z"
       />
       <path
-        d="M7.592 7.103c-5.11 2.755-4.519 5-4.519 7.5M57.274 26.103v1M3.052 18.103v2M57.274 30.103v5"
         stroke="#fff"
+        strokeLinecap="round"
         strokeOpacity=".4"
         strokeWidth="1.5"
-        strokeLinecap="round"
+        d="M7.6 7.1c-5.12 2.76-4.53 5-4.53 7.5M57.27 26.1v1M3.05 18.1v2M57.27 30.1v5"
       />
       <path
-        d="M13.053 15.103v6M10.04 18.103h6.025"
         stroke="#0A0D27"
-        strokeWidth="2"
         strokeLinecap="round"
+        strokeWidth="2"
+        d="M13.05 15.1v6M10.04 18.1h6.02"
       />
       <ellipse
-        rx="1.506"
-        ry="1.5"
-        transform="matrix(1 0 0 1 44.723 13.66)"
         fill="#0A0D27"
+        rx="1.51"
+        ry="1.5"
+        transform="matrix(1 0 0 1 44.72 13.66)"
       />
       <ellipse
-        rx="1.506"
-        ry="1.5"
-        transform="matrix(1 0 0 1 49.743 17.603)"
         fill="#0A0D27"
+        rx="1.51"
+        ry="1.5"
+        transform="matrix(1 0 0 1 49.74 17.6)"
       />
       <ellipse
-        rx="1.506"
-        ry="1.5"
-        transform="matrix(1 0 0 1 44.723 21.603)"
         fill="#0A0D27"
+        rx="1.51"
+        ry="1.5"
+        transform="matrix(1 0 0 1 44.72 21.6)"
       />
       <ellipse
-        rx="1.506"
-        ry="1.5"
-        transform="matrix(1 0 0 1 39.703 17.603)"
         fill="#0A0D27"
+        rx="1.51"
+        ry="1.5"
+        transform="matrix(1 0 0 1 39.7 17.6)"
       />
       <path
         className="text"
@@ -74,11 +74,11 @@ const Logo = ({
       />
       <defs>
         <linearGradient
-          id="a"
-          x1="29.159"
-          y1="-7.397"
-          x2="30.155"
-          y2="49.103"
+          id={`paint_linear_${id}`}
+          x1="29.16"
+          x2="30.15"
+          y1="-7.4"
+          y2="49.1"
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#FF5F5F" />

@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const Wrapper = styled.menu`
-  ${({ theme }) => css`
+export const Wrapper = styled.menu<MenuFullProps>`
+  ${({ theme, isOpen }) => css`
     display: flex;
     align-items: center;
     padding: ${theme.spacings.small} 0;
     position: relative;
+    z-index: ${isOpen ? theme.layers.menu : `calc(${theme.layers.menu} - 1)`};
   `}
 `
 
@@ -21,9 +22,9 @@ export const LogoWrapper = styled.div`
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.white};
+    cursor: pointer;
     width: 2.4rem;
     height: 2.4rem;
-    cursor: pointer;
   `}
 `
 
@@ -32,6 +33,8 @@ export const MenuGroup = styled.div`
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
+    align-items: center;
+    z-index: ${theme.layers.menu} + 1;
 
     > div {
       margin-left: ${theme.spacings.xsmall};
@@ -39,12 +42,18 @@ export const MenuGroup = styled.div`
   `}
 `
 
-export const MenuNav = styled.div``
+export const MenuNav = styled.div`
+  ${({ theme }) => css`
+    ${media.greaterThan('medium')`
+			margin-left: ${theme.spacings.small};
+		`}
+  `}
+`
 
 export const MenuLink = styled.a`
   ${({ theme }) => css`
     position: relative;
-    /* color: ${theme.colors.white}; */
+    color: ${theme.colors.white};
     font-size: ${theme.font.sizes.medium};
     margin: 0.3rem ${theme.spacings.small} 0;
     text-decoration: none;
@@ -58,7 +67,6 @@ export const MenuLink = styled.a`
         height: 0.3rem;
         background-color: ${theme.colors.primary};
         animation: hoverAnimation 0.2s forwards;
-        text-decoration: none;
       }
 
       @keyframes hoverAnimation {
@@ -78,13 +86,15 @@ export const MenuLink = styled.a`
 type MenuFullProps = {
   isOpen: boolean
 }
+
 export const MenuFull = styled.nav<MenuFullProps>`
-  ${({ isOpen, theme }) => css`
+  ${({ theme, isOpen }) => css`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background: ${theme.colors.white};
-    position: absolute;
+    position: fixed;
+    z-index: ${theme.layers.menu};
     top: 0;
     bottom: 0;
     left: 0;
@@ -94,6 +104,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     transition: opacity 0.3s ease-in-out;
     opacity: ${isOpen ? 1 : 0};
     pointer-events: ${isOpen ? 'all' : 'none'};
+    visibility: ${isOpen ? 'visible' : 'hidden'};
 
     > svg {
       position: absolute;

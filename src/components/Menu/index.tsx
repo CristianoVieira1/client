@@ -7,31 +7,47 @@ import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 import Logo from 'components/Logo'
 import * as S from './styles'
 import Button from 'components/Button'
+import MediaMatch from 'components/MediaMatch'
 
 export type MenuProps = {
-  userName?: string
+  username?: string
 }
 
-const Menu = ({ userName }: MenuProps) => {
+const Menu = ({ username }: MenuProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <S.Wrapper>
-      <S.IconWrapper onClick={() => setIsOpen(true)}>
-        <MenuIcon aria-label="Open Menu" />
-      </S.IconWrapper>
+    <S.Wrapper isOpen={isOpen}>
+      <MediaMatch lessThan="medium">
+        <S.IconWrapper onClick={() => setIsOpen(true)}>
+          <MenuIcon aria-label="Open Menu" />
+        </S.IconWrapper>
+      </MediaMatch>
 
       <S.LogoWrapper>
         <Logo hideOnMobile />
       </S.LogoWrapper>
 
+      <MediaMatch greaterThan="medium">
+        <S.MenuNav>
+          <S.MenuLink href="#">Home</S.MenuLink>
+          <S.MenuLink href="#">Explore</S.MenuLink>
+        </S.MenuNav>
+      </MediaMatch>
+
       <S.MenuGroup>
         <S.IconWrapper>
           <SearchIcon aria-label="Search" />
         </S.IconWrapper>
+
         <S.IconWrapper>
           <ShoppingCartIcon ria-label="Shopping Cart" />
         </S.IconWrapper>
+        {!username && (
+          <MediaMatch greaterThan="medium">
+            <Button>Sign in</Button>
+          </MediaMatch>
+        )}
       </S.MenuGroup>
 
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
@@ -40,17 +56,17 @@ const Menu = ({ userName }: MenuProps) => {
           <S.MenuLink href="#">Home</S.MenuLink>
           <S.MenuLink href="#">Explore</S.MenuLink>
 
-          {!!userName && (
+          {!!username && (
             <>
               <S.MenuLink href="#">My account</S.MenuLink>
               <S.MenuLink href="#">Wishlist</S.MenuLink>
             </>
           )}
         </S.MenuNav>
-        {!userName && (
+        {!username && (
           <S.RegisterBox>
             <Button fullWidth size="large">
-              Login Now
+              Log in now
             </Button>
             <span>or</span>
             <S.CreateAccount href="#" title="Sign Up">
