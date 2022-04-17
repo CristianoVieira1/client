@@ -20,7 +20,7 @@ const wrapperModifiers = {
       height: 4.5rem;
 
       svg {
-        height: 4.5rem;
+        height: 7.8rem;
         pointer-events: none;
       }
 

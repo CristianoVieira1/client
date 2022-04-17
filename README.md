@@ -1,7 +1,7 @@
 
-<p align="center"><a href="#" target="_blank"><img src="https://github.com/CristianoVieira1/client/blob/master/public/img/logo-2.png" width="400"></a></p>
+<p align="center"><a href="#" target="_blank"><img src="https://github.com/CristianoVieira1/client/blob/master/public/img/hr.svg" width="400"></a></p>
 
-Projeto desenvolvido em [Next.js](https://nextjs.org/) plataforma de GAMES.
+Projeto desenvolvido em [Next.js](https://nextjs.org/) portal de vagas e ecommerce da empresa The HR Platform.
 ## What is inside?
 
 This project uses lot of stuff as:

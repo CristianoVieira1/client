@@ -17,14 +17,32 @@ describe('<Button />', () => {
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
         background: linear-gradient(180deg,#ff5f5f 0%,#f062c0 50%);
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         color: #FAFAFA;
         border: 0;
         cursor: pointer;
         border-radius: 0.4rem;
         padding: 0.8rem;
+        -webkit-text-decoration: none;
+        text-decoration: none;
         height: 4rem;
         font-size: 1.4rem;
         padding: 0.8rem 3.2rem;
+      }
+
+      .c0:hover {
+        background: linear-gradient(180deg,#e35565 0%,#d958a6 50%);
       }
 
       <button
@@ -68,5 +86,18 @@ describe('<Button />', () => {
 
     expect(screen.getByText(/buy now/i)).toBeInTheDocument()
     expect(screen.getByTestId('icon')).toBeInTheDocument()
+  })
+
+  it('should render Button as a link', () => {
+    renderWithTheme(
+      <Button as="a" href="/link">
+        Buy now
+      </Button>
+    )
+
+    expect(screen.getByRole('link', { name: /buy now/i })).toHaveAttribute(
+      'href',
+      '/link'
+    )
   })
 })
