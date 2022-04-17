@@ -43,7 +43,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 ## API
 
-https://github.com/CristianoVieira1/wongames
+https://github.com/CristianoVieira1/api_the_hr_platform
 
 ## Saber mais
 
